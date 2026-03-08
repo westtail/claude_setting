@@ -7,12 +7,29 @@ Claude Codeのカスタム設定ファイル集です。
 ```bash
 # クローン
 git clone https://github.com/westtail/claude_setting.git
+cd claude_setting
+```
 
-# シンボリックリンクを作成
-ln -sf $(pwd)/claude_setting/agents ~/.claude/agents
-ln -sf $(pwd)/claude_setting/rules ~/.claude/rules
-ln -sf $(pwd)/claude_setting/skills ~/.claude/skills
-ln -sf $(pwd)/claude_setting/settings.json ~/.claude/settings.json
+### シンボリックリンク（推奨）
+
+リポジトリの変更が即座に反映されます。
+
+```bash
+ln -sf $(pwd)/agents ~/.claude/agents
+ln -sf $(pwd)/rules ~/.claude/rules
+ln -sf $(pwd)/skills ~/.claude/skills
+ln -sf $(pwd)/settings.json ~/.claude/settings.json
+```
+
+### コピー
+
+シンボリックリンクが動作しない場合や、設定をスナップショットとして固定したい場合。
+
+```bash
+cp -r agents ~/.claude/agents
+cp -r rules ~/.claude/rules
+cp -r skills ~/.claude/skills
+cp settings.json ~/.claude/settings.json
 ```
 
 ## 構成
